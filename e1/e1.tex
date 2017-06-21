@@ -1,0 +1,271 @@
+\documentclass{article}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{bm}
+\usepackage{indentfirst}
+\usepackage{multirow}
+
+\begin{document}
+
+\vspace*{0.25cm}
+
+\hrulefill
+
+\thispagestyle{empty}
+
+\begin{center}
+\begin{large}
+\sc{UM--SJTU Joint Institute \vspace{0.3em} \\ Physics Laboratory \\(Vp141)}
+\end{large}
+
+\hrulefill
+
+\vspace*{5cm}
+\begin{Large}
+\sc{{Laboratory Report}}
+\end{Large}
+
+\vspace{2em}
+
+\begin{large}
+\sc{{Exercise 1
+\vspace{0.5em}
+
+Measurements of the Moment of Inertia
+}}
+\end{large}
+\end{center}
+
+
+\vfill
+
+\begin{table}[h!]
+\flushleft
+\begin{tabular}{lll}
+Name: Yihao Liu \hspace*{2em}&
+ID: 515370910207\hspace*{2em}\\
+Name: Guangzheng Wu \hspace*{2em}&
+ID: 515370910175\hspace*{2em}
+& Group: 7\\
+
+
+\\
+
+Date: 21 June 2016 
+
+\end{tabular}
+\end{table}
+
+\hfill
+\begin{tiny}
+[rev. 1.0]
+\end{tiny}
+\newpage
+
+\section{Introduction}
+
+The objectives of this exercise are to get familiar with the constant-torque method for
+measuring the moment of inertia of a rigid body and study the dependence of the moment
+of inertia on the change of mass, mass distribution or axis of rotation. Moreover, in this
+exercise, the parallel axis theorem (Steiner’s) theorem will be verified.
+As a part of measurement technique skills, Learn to measure the time using the
+counter-type electronic timer.
+\\
+
+Moment of inertia is a property of a rigid body that defines its resistance (inertia) to
+a change of angular velocity of rotation about an axis. This qualitative characteristics of
+an extended body constrained to rotate about an axis is determined by a combination
+of mass and its distribution. The moment of inertia of a rigid bodywith respect to a
+certain rotation axis can be calculated mathematically. However, if the body has rela-
+tively irregular shape or non-uniformly distributed mass, the calculation may be difficult.
+Experimental methods may be used in such cases.
+
+\subsection{Second Law of Dynamics for Rotational Motion}
+
+According to the second law of dynamics for rotational motion about a fixed axis
+
+\begin{equation}\label{eq-1}
+M=I\beta
+\end{equation}
+
+relates the component of the torque $M$ about the axis of rotation with the moment of
+inertia about this axis, and angular acceleration component $\beta$. Therefore, the moment
+of inertia $I$ can be found once the torque and the resultant angular acceleration are
+measured.\\
+
+Moment of inertia is an additive quantity, $i.e$. if the moment of inertia of rigid body
+$A$ about an axis is $I_A$ and the moment of inertia of rigid body $B$ about the same axis is
+$I_B$ , then the moment of inertia of the combined rigid body $AB$ composed of $A$ and $B$ is
+
+$$I_{AB}=I_A+I_B$$
+
+\subsection{Parallel Axis Theorem}
+
+If the moment of inertia of a rigid body with mass m about an axis through the center
+of mass is $I_0$ . Then for any axis parallel to that axis, the moment of inertia is
+
+\begin{equation}\label{eq-2}
+I=I_0+md^2
+\end{equation}
+
+where $d$ is the distance between the axes. This result is known as the parallel axis theorem
+or Steiner’s theorem.
+
+\subsection{Apparatus and Measurement Method}
+
+The experimental setup is shown in Figure \ref{fig-1}. It consists of a turntable with an
+attached photo gate system used for time measurements.\\
+
+Let us assume that, the empty turntable is initially rotating and its moment of inertia
+with respect to the rotation axis is $I_1$ . Since the bearings are not frictionless, there
+will be a non-zero frictional torque $M_\mu$ causing the turntable to decelerate with angular
+acceleration $\beta_1$
+
+\begin{equation}\label{eq-3}
+M_\mu=-I_1\beta_1
+\end{equation}
+
+On the other hand, assume that a light and inextensible string is wound on a cone
+pulley with radius $R$ placed on the axis of rotation. Attached to the other end of the string
+passing through a disk pulley, there is a mass $m$ hanging. After the mass is released the
+system moves (rotates) with a constant acceleration (angular acceleration) because of a
+constant net force (torque). If the mass moves downward with acceleration $a$, the tension
+in the string is $T = m(g − a)$. And if the turntable rotates with angular acceleration $\beta_2$ at
+the same time, we have $a = R_{\beta_2}$ (we assume that the string does not slip on the pulleys).
+The torque the string exerts on the turntable is then $T_R = m(g − R_{\beta_2} )R$, and hence the
+equation of motion of the turntable reads
+
+\begin{equation}\label{eq-4}
+m(g − R_{\beta_2} )R-M_\mu=I_1\beta_1
+\end{equation}
+
+Eliminating $M_\mu$ from Eqs. \ref{eq-3} and \ref{eq-4}, one obtains
+
+\begin{equation}\label{eq-5}
+I_1=\frac{mR(g-R\beta_2)}{\beta_2-\beta_1}
+\end{equation}
+
+Similarly, if a rigid body of unknown moment of inertia is placed on the turntable, we
+may find
+
+\begin{equation}\label{eq-6}
+I_2=\frac{mR(g-R\beta_4)}{\beta_4-\beta_3}
+\end{equation}
+
+where $\beta_3$ is the magnitude of angular deceleration of the turntable with the body, and $\beta_3$
+is its angular acceleration, when the mass $m$ is released.\\
+
+Using the fact that the moment of inertia is an additive quantity, the moment of inertia
+of the rigid object placed on the turntable may be found as the difference
+
+\begin{equation}\label{eq-7}
+I_3=I_2-I_1
+\end{equation}
+
+\subsection{Measurement of the angular acceleration}
+
+In the experiment, two shielding pins are fixed at the edge of the turntable generating
+signals at the photo gate with the phase interval of $\pi$ as the turntable rotates. A counter-
+type electronic timer is used to measure the number k and the time $t$ of the photo gate
+signal. If ($k_m$ , $t_m$ ) and ($k_n$ , $t_n$ ) are two sets of data from the measurement, the angular
+displacements are
+
+\begin{equation}\label{eq-8}
+\theta_m=k_m\pi=\omega_0t_m+\frac{1}{2}\beta t_m^2
+\end{equation}
+
+\begin{equation}\label{eq-9}
+\theta_n=k_n\pi=\omega_0t_n+\frac{1}{2}\beta t_n^2
+\end{equation}
+
+where $\omega_0$ is the initial angular speed. After eliminating $\omega_0$ in Eq. \ref{eq-8} and \ref{eq-9}, the angular
+acceleration is obtained as
+
+\begin{equation}\label{eq-10}
+\beta=\frac{2\pi(k_nt_m-k_mt_n)}{t_n^2t_m-t_m^2t_n}
+\end{equation}
+
+\section{Measurement}
+\begin{enumerate}
+\item
+Measure the mass of the weight, hoop, disk, and cylinder, and the radius of the cone
+pulley and the cylinder (as requested by the instructor). Calculate the moment of
+inertia of the hoop and the disk mathematically. Find the local gravity acceleration
+on Internet.
+\item
+Turn on the electronic timer and switch to mode 1-2 (single gate, multiple pulses).
+\item
+Place the instrument close to the edge of the desk and stretch the pulley arm outside.
+\item
+Level the turntable with the bubble level.
+\item
+Make the turntable rotating and press the start button of the timer. After at least
+8 signals are recorded, stop the turntable and write down the data.
+\item
+Attach the weight to one end of the string. Place the string on the disk pulley,
+thread through the hole on the arm, and wind the string around the 3rd winder of
+the cone pulley. Adjust the arm holder so that the string is crossing the center of
+the hole.
+\item
+Release the weight and start the timer. Stop the turntable when the weight hits the
+floor. Write down the recorded data.
+\item
+The moment of inertia of the empty turntable is obtained by using the formulae in
+Section 3 and the data from step 5 and 7. Repeat the step 5 ∼ 7 with a rigid object
+placed on the turntable. Eq. \ref{eq-7} is used to find the moment of inertia of the rigid
+object.
+
+\end{enumerate}
+
+In the experiment, each student should measure the moment of inertia of the empty
+turntable, the hoop, the disk and the cylinder, as well as verify the parallel-axis theorem
+by placing two cylinders off the axis while keeping their center of mass on axis in order
+to keep the rotation steady.\\
+
+The distance of the holes to the center of the turntable are about 45, 60, 75, 90, 105
+mm respectively. The timer resolution is 0.0001 s, and the error is 0.004\%.
+
+
+
+\input{results.tex}
+
+\section{Measurement uncertainty analysis}
+
+\begin{align*}
+u_\beta&=\sqrt{
+\left(\frac{\partial \beta}{\partial t_n}\right)^2u_{tn}^2+
+\left(\frac{\partial \beta}{\partial t_m}\right)^2u_{tm}^2
+}\\
+&=2\pi\sqrt{
+\left[\frac{k_mt_n^2t_m-2k_nt_nt_m^2+k_nt_m^3}{(t_n^2t_m-t_m^2t_n)^2}\right]^2u_{tn}^2+
+\left[\frac{k_nt_m^2t_n-2k_mt_mt_n^2+k_mt_n^3}{(t_n^2t_m-t_m^2t_n)^2}\right]^2u_{tm}^2
+}
+\end{align*}
+
+\begin{align*}
+u_I&=\sqrt{
+\left(\frac{\partial I}{\partial m}\right)^2u_{m}^2+
+\left(\frac{\partial I}{\partial R}\right)^2u_{R}^2+
+\left(\frac{\partial I}{\partial \beta_1}\right)^2u_{\beta_1}^2+
+\left(\frac{\partial I}{\partial \beta_2}\right)^2u_{\beta_2}^2
+}\\
+&=\left\lbrace
+\left[\frac{R(g-R\beta_2)}{\beta_2-\beta_1}\right]^2u_{m}^2+
+\left(\frac{mg-2m\beta_2R}{\beta_2-\beta_1}\right)^2u_{R}^2+
+\right.\\&\quad\left.
+\left[\frac{mR(g-R\beta_2)}{(\beta_2-\beta_1)^2}\right]^2u_{\beta_1}^2+
+\left[\frac{-mR^2(\beta_2-\beta_1)-mR(g-R\beta_2)}{(\beta_2-\beta_1)^2}\right]^2u_{\beta_2}^2
+\right\rbrace^{0.5}
+\end{align*}
+$$\beta=\frac{2\pi(k_nt_m-k_mt_n)}{t_n^2t_m-t_m^2t_n}$$
+$$I_1=\frac{mR(g-R\beta_2)}{\beta_2-\beta_1}$$
+
+
+
+
+\end{document}

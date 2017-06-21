@@ -1,0 +1,22 @@
+fid=fopen('data1.txt','r');
+A=fscanf(fid,'%f',[4 inf]);
+t1=A(2,:)./10;
+f1=A(3,:);
+s1=A(4,:);
+fclose(fid);
+fid=fopen('data2.txt','r');
+A=fscanf(fid,'%f',[4 inf]);
+t2=A(2,:)./10;
+f2=A(3,:);
+s2=A(4,:);
+fclose(fid);
+
+w0=4.034;
+uw0=0.0001295;
+ut=0.0001;
+w1=2*pi./t1;
+w2=2*pi./t2;
+uw1=2*pi*ut./t1.^2;
+uw2=2*pi*ut./t2.^2;
+
+uk1=2*pi/w0/

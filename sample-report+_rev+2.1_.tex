@@ -1,0 +1,290 @@
+\documentclass{article}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\begin{document}
+
+\vspace*{0.25cm}
+
+\hrulefill
+
+\thispagestyle{empty}
+
+\begin{center}
+\begin{large}
+\sc{UM--SJTU Joint Institute \vspace{0.3em} \\ Physics Laboratory \\(Vp141)}
+\end{large}
+
+\hrulefill
+
+\vspace*{5cm}
+\begin{Large}
+\sc{{Laboratory Report}}
+\end{Large}
+
+\vspace{2em}
+
+\begin{large}
+\sc{{Exercise 0
+\vspace{0.5em}
+
+Measurement of the Acceleration Due to Gravity
+with a Simple Pendulum}}
+\end{large}
+\end{center}
+
+
+\vfill
+
+\begin{table}[h!]
+\flushleft
+\begin{tabular}{lll}
+Name: Jane Doe \hspace*{2em}&
+ID: 123456\hspace*{2em}
+& Group: 8\\
+
+Name: Joe Doe \hspace*{2em}&
+ID: 123457\hspace*{2em}
+& Group: 8\\
+
+\\
+
+Date: 10 October 2010 
+
+\end{tabular}
+\end{table}
+
+\hfill
+\begin{tiny}
+[rev. 2.0]
+\end{tiny}
+\newpage
+
+
+\section{Introduction}
+
+{\color{blue}This part should include a brief description of the experiment: its objectives, underlying physical model and phenomena, and equations that you will use in your calculations.  It may be a bit longer than that below, but you should not simply copy the lab manual or quote long passages from textbooks.}
+\vspace*{1.5em}
+
+The objective of this exercise is to find the value of the acceleration due to gravity, based on measurements of the period of a simple physical pendulum and the dependence of the period on the length of the pendulum.
+
+A simple pendulum consists of a point mass $m$ suspended on a massless inextensible thread with length $l$, placed in a uniform gravitational field characterized by acceleration $g$.  If a simple pendulum is displaced from the equilibrium position by a small angle $\alpha$, it may be approximately treated as a harmonic oscillator, and 
+the solution of its equation motion is a periodic function of time (cosine) with the period 
+\begin{equation}\label{eqperiod}
+T=2\pi\sqrt{\frac{l}{g}}.
+\end{equation}
+
+Hence, by measuring the period $T$ and the length of $l$ a pendulum it is possible to find the value of the acceleration due to gravity as
+\begin{equation}\label{grav}
+g = \frac{4\pi^2l}{T^2}.
+\end{equation}
+
+Alternatively, the value of the acceleration due to gravity may be measured by finding the slope of the line $T^2$ vs. $l$. By squaring both sides of Eq. (\ref{eqperiod}) one obtains
+\begin{equation}\label{lin}
+T^2 = \frac{4\pi^2}{g}\,l.
+\end{equation}
+Therefore, if one measures the period for different lengths of the pendulum, and plots the graph $T^2$ vs. $l$, the measurement points should align along a straight line. From the slope of the line, the acceleration due to gravity can be found. 
+
+\section{Experimental setup}
+{\color{blue}A sketch and a description of the measurement setup should be simple, understandable and --- first of all --- conform to the setup used in the experiment. The information about measurement instruments used (type, class, measurement range, precision, \textit{etc.}) should be given here.}
+\vspace*{1.5em}
+
+
+The pendulum used in the experiment is a metal ball attached to a fine light thread of adjustable length. The thread is suspended on a solid bar attached to the wall.  The measurement system consists of an optoelectronic sensor \textit{OS} connected to a digital timer \textit{MCR--21}. The diagram of the experimental setup is presented in Figure \ref{setup}.
+
+
+
+The optoelectronic sensor generates an impulse each time the thread passes through  the gate of the sensor.  The timer is a digital device allowing measurements with maximum uncertainty of 0.01 s.  It starts the measurement after the first impulse from the sensor, skips the next impulse, and ends the measurement when the third impulse arrives, thus measuring the time of one period of oscillations.
+
+The length of the pendulum was determined by using a measurement tape with maximum uncertainty 1 mm.  However, the precision of this measurement was smaller.  This is because the distance from the point the thread was attached to the ball and the ball's center could only be determined approximately. Therefore the maximum uncertainty of the thread length measurement has been estimated at 5 mm. 
+
+The length of the thread can be adjusted.
+
+\section{Measurements}
+{\color{blue}This part should list steps of the measurement procedure. This is also the section, where any comments/observations regarding the measurements should be made.  These include, but are not limited to: abnormal functioning of measurement devices, instability of readings, \textit{etc}}
+
+\subsection{Measurements of the period of oscillations\label{proc1}}
+
+Before starting measurements, the power supply was turned on.
+\begin{enumerate}
+\item The position of the sensor was adjusted so that the pendulum placed out of the equilibrium was able to trigger a signal.
+\item The digital timer was reset by pressing the 'RESET' button.
+\item The timer was set into the 'ready' mode ('READY' button); ready to receive signals from the sensor.
+\item The pendulum was displaced from the equilibrium position and released.
+\item The reading on the timer was recorded.
+\end{enumerate}
+The above measurement of the period of oscillations was repeated ten times and the obtained data is presented in Table \ref{period}.
+
+Then, the length of the thread was measured by measuring the distance between the suspension point and the center of the ball.  Because of the fact that the position of the ball's center was determined only approximately, the uncertainty of this measurement is much larger than the maximum uncertainty of the measurement tape. 
+
+\subsection{Relation between the period of oscillations and the pendulum length\label{proc2}}
+
+The measurements of the period of oscillations were analogous to those in the previous section. For each length of the thread one measurement of the period was performed.  The length of the thread was increased from 0.5 to 2.1 m in steps of 0.2 m.  The results of the measurements are presented in Table \ref{linear} (columns 1 through 3).
+
+\section{Results\label{results}}
+{\color{blue}In this section the results of your measurements should be presented. Usually tables and graphs are the best ways to present the results. The values of all physical quantities (both: measured and calculated based on the measurements) must be expressed using the appropriate SI units.  
+
+This section should also include calculations with all intermediate steps (in case of repeated calculations, one sample calculation is enough). If any values are calculated by data analysis 
+software (\textit{e.g.} Origin, QtiPlot, R), it should be clearly indicated.}
+
+\subsection{Measurements of the period of oscillations}
+
+The period of oscillations was measured in the procedure described in section \ref{proc1} and the average value was calculated based on the results presented in Table \ref{period} as
+$$
+\overline{T} = \frac{1}{10}\sum\limits_{i=1}^{10} T_i = 2.21 \pm 0.02\ {\rm{s}}.
+$$
+A single measurement of the pendulum's length yielded $l=121.5 \pm 0.5\ {\rm{cm}}$.
+
+Based on the results of the measurements, the acceleration due to gravity was found from Eq. (\ref{grav}) as\footnote{{\color{blue}{Uncertainties of the results are calculated in section \ref{uncert}.}}}
+$$
+g = \frac{4\pi^2l}{\overline{T}} = \frac{4\cdot 3.14159^2\cdot1.215}{2.21^2} = 9.82\pm 0.08 \ {\rm{m/s}}^2.
+$$
+\begin{table}
+\begin{center}
+\begin{tabular}{cc}
+%\hline
+\hline
+\textit{Measurement} & $T$ [s] $\pm$ 0.01 [s] \\
+\hline
+1	&	2.21\\
+2	&	2.23\\
+3	&	2.19\\
+4	&	2.22\\
+5	& 2.25\\
+6	& 2.19\\
+7	& 2.23\\
+8	& 2.24\\
+9	& 2.18\\
+10	& 2.16\\
+\hline
+\end{tabular}
+\caption{Measurement data for the oscillation period. \label{period}
+{\color{blue}{Add an additional column if the uncertainties of the measurements are different.}}
+}
+\end{center}
+\end{table}
+
+\subsection{Relation between the period of oscillations and the pendulum length}
+
+The period of oscillations was measured for different lengths of the pendulum (\textit{cf.} Table \ref{linear}).  
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ccccc}
+%\hline
+\hline
+\textit{Measurement} & $l$ [m] $\pm$ 0.005 [m] &$T$ [s] $\pm$ 0.01 [s] & $T^2$ [s$^2$] & $u_{T^2}$ [s$^2$] \\\hline
+1	&0.500	&1.38	&1.90	&0.03\\
+2	&0.700	&1.68	&2.82	&0.03\\
+3	&0.900	&1.90	&3.61 	&0.04\\
+4	&1.100	&2.11	&4.45	&0.04\\
+5	&1.300	&2.26	&5.11	&0.05\\
+6	&1.500	&2.46	&6.05	&0.05\\
+7	&1.700	&2.61	&6.81	&0.05\\
+8	&1.900	&2.76	&7.62	&0.06\\
+9	&2.100	&2.88	&8.29	&0.06\\
+\hline
+
+\hline
+\end{tabular}
+\caption{Data for the dependence of the oscillation period on the length of the pendulum.\label{linear}}
+\end{center}
+\end{table}
+
+Alternatively, the value of the acceleration due to gravity is found from the graph $T^2$ vs. $l$ presented in Figure \ref{fig}.
+A linear fit\footnote{{\color{blue}{Before fitting a straight line to the data, a statistical test should be run in order to test a hypothesis that the relation between the two quantities may be considered as linear.  For the data discussed in this sample report the test yields no reason to reject such hypothesis. You will learn more about hypotheses testing in a course in probability and statistics.}}} to the data
+$T^2 = \alpha l + \beta$ yields the slope $\alpha = 4.000\ {\rm{s^2/m}}$ and the intercept $\beta=-8.71\times10^{-3}\ {\rm{s^2}}$ with standard errors $u_\alpha = 0.045\times {\rm{s^2/m}}$ and $u_\beta = 6.24\times 10^{-2}\ {\rm{s}}^2$ and $R^2=0.999$. The fitting procedure has been performed using Origin.
+
+Using the value of the slope from the linear in the relation (\ref{lin}), the acceleration due to gravity can be found as
+\begin{equation}\label{slope}
+g = \frac{4\pi^2}{\alpha} = \frac{4\cdot 3.14159^2}{4.00} = 9.88 \pm 0.11\ {\rm{m/s}}^2,
+\end{equation}
+with the relative uncertainty $1.1\%$.
+
+
+
+
+
+\section{Measurement uncertainty analysis\label{uncert}}
+{\color{blue}{This is an important section that \textbf{must be included} in your report. You should clearly indicate the methods you use to calculate uncertainties. Often the analysis presented in this section is performed concurrently with the analysis and calculations based on the results presented in section \ref{results}.} Please remember to write the results in a correct format with the appropriate SI units.}
+
+\subsection{Uncertainty of period measurements}
+
+For a single measurement of the period by the digital timer its uncertainty (of type $B$) is $\Delta_{T,B} = \Delta_{\rm dev}=0.01$ s. In the experiment, the period is found by taking the average of 10 measurements. In order to estimate type--\textit{A} uncertainty of the period, the standard deviation of the average value is calculated as
+$$
+s_{\overline{T}} = \sqrt{\frac{1}{n(n-1)}\sum\limits_{i=1}^n\left(T_i-\overline{T}\right)^2}.
+$$
+Using the data from Table \ref{period} one obtains $s_{\overline{T}}=9.19\cdot 10^{-3}$ s.
+Taking into account that $t_{0.95} = 2.26$ for $n=10$, the type--\textit{A} uncertainty  is estimated as $\Delta_{T,A} = 2.26\cdot 9.19\cdot 10^{-3}= 2.08 \cdot 10^{-2}$ s. 
+
+Hence the combined uncertainty $$u_T = \sqrt{\Delta_{T,A}^2 + \Delta_{T,B}^2} = \sqrt{(2.08 \cdot 10^{-2})^2+0.01^2} = 0.02 \ {\rm{s}}.$$
+
+\subsection{Uncertainty of pendulum length measurements}
+
+Since the measurements of the pendulum's length were single measurements with type--\textit{B} uncertainty of 0.005 m, the uncertainty is $u_l = 0.005\ {\rm{m}}$.
+
+
+\subsection{Uncertainty of the acceleration due to gravity}
+Acceleration due to gravity is found indirectly from Eq. (\ref{grav}), by measuring the period and the length of the pendulum.  Therefore its uncertainty $u_g$ is found by applying the uncertainty propagation formula
+\begin{align*}
+u_{g} &= \sqrt{\left(\frac{\partial g}{\partial T}\right)^2 u_T^2 + \left(\frac{\partial g}{\partial l}\right)^2 u_l^2}
+=
+\sqrt{\frac{64\pi^2l^2}{\overline{T}^6}\, u_T^2 + \frac{16\pi^4}{\overline{T}^4}\, u_l^2} \\
+&=\sqrt{\frac{64 \cdot 3.14159^2 \cdot 1.215^2}{2.21^6}\cdot 0.02^2+ \frac{16 \cdot 3.14159^4}{2.21^4}\cdot 0.005^2} \\
+&= 0.08\ {\rm{s}}.
+\end{align*}
+
+Hence the  value of the acceleration due to gravity found form the measurement of the period for a fixed length of the pendulum is
+$$
+g=9.82\pm 0.08 \ {\rm{m/s}}^2.
+$$
+with the relative uncertainty $0.78\%$.
+
+\subsection{Uncertainty of the acceleration due to gravity found from the slope of the $T^2$ vs. $l$ line}
+
+The uncertainty of the acceleration due to gravity found from the slope of the $T^2$ vs. $l$ line can be estimated\footnote{{\color{blue}{This is an estimate only, since in the measurements the values of both $l$ and $T^2$ are uncertain, unlike in the classical regression problem.}}} by using the value of the uncertainty of the slope, which was calculated in the fitting procedure $u_\alpha = 0.045\ {\rm{s^2/m}}$.  Since the acceleration due to gravity is not directly equal to the slope, but was found from the formula (\ref{slope}), the uncertainty of the slope propagates as
+$$
+u_g = \sqrt{\left(\frac{4\pi^2}{\alpha^2}\right)^2 u_\alpha^2} = \frac{4\pi^2}{\alpha^2} u_\alpha =
+\frac{4\cdot 3.14159^2}{4.000^2}\cdot0.045 = 0.11\ {\rm{m/s}}^2.
+$$
+
+Hence the value of the acceleration due to gravity found from the slope of the $T^2$ vs. $l$ line is
+$$
+g = 9.88 \pm 0.11\ {\rm{m/s}}^2
+$$
+with the relative uncertainty $1.11\%$.
+
+The uncertainty of $T^2$, needed to plot error bars in Figure \ref{fig} was found from the uncertainty propagation formula
+$$
+u_{T^2} = 2 T u_T,
+$$
+since the square of the period was not measured directly, but calculated from the (directly measured) value of $T$.
+
+\section{Conclusions and discussion}
+
+{\color{blue}The final section of your report should include a summary and discussion of the results and their comparison with other measurement data available (you may refer to textbooks or research journals; please remember to cite your source properly).  The discussion should include, but is not limited to: a comparison with the theoretical values predicted by the model, discussion of measurement uncertainties and their impact on the value found in the experiment.  
+
+This is also the section where you should put your creative ideas on how to improve the experiment and the accuracy of measurements.}
+\vspace*{1.5em}
+
+
+
+In the experiment the acceleration due to gravity was found first by measuring the period of oscillations for a fixed length of the pendulum, and then by measuring the period for different lengths and finding the acceleration due to gravity from the slope of the $T^2$ vs. $l$ line.  The two methods yielded the values
+$$
+g=9.82\pm 0.08 \ {\rm{m/s}}^2 \qquad{\rm{and}}\qquad g = 9.88 \pm 0.11\ {\rm{m/s}}^2,
+$$
+respectively, with the former method yielding the result with slightly smaller uncertainty. Both values conform (within the uncertainty range) to the value $9.81\pm0.07$ ${\rm{m/s}}^2$ quoted for Happy Town in the paper A. Smith, \textit{Journal of Experimental Physics}, \textbf{18} 1234 (2001).
+
+The fundamental source of inaccuracy of both methods is the fact that the formula for the period of oscillations (\ref{eqperiod}) is valid only under the assumption that the motion is harmonic, what in the case of a simple pendulum is only approximately valid for small angles. In general, for a simple pendulum, the period depends on the amplitude, and for different angular displacements from the equilibrium position, the measured values of the period differ.
+
+The other factors that have been neglected in the model yielding the formula (\ref{eqperiod}) include: the fact that the thread is not perfectly inextensible; viscous air and other dissipative forces dampen the pendulum's motion; non-inertiality of the earth (the latter, however, being a small effect that can usually be safely neglected).
+
+The precision of the measurements, can be further increased by redesigning the measurement of the pendulum's length.  The uncertainty of this measurement, which is greater than the resolution of the measurement tape, is mainly due to the fact that the distance to the center of the ball cannot be measured accurately. Instead of measuring the total  distance between the suspension point and the center of the ball by a measurement tape, the radius of the ball may be measured separately (\textit{e.g.} in a calliper measurement).
+
+\section*{Data Sheet}
+
+{\color{blue}Please remember to attach the \textbf{original} data sheet signed by your instructor.}
+
+
+\end{document}
